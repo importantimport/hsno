@@ -29,6 +29,7 @@
     "@typescript-eslint/parser": "^5.40.1",
     "eslint": "8.25.0",
     "eslint-plugin-qwik": "0.11.1",
+    "fff-flavored-frontmatter": "0.4.0-alpha.0",
     "globals": "^13.17.0",
     "node-fetch": "3.2.10",
     "prettier": "2.7.1",

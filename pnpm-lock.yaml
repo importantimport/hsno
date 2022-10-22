@@ -10,6 +10,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.40.1
   eslint: 8.25.0
   eslint-plugin-qwik: 0.11.1
+  fff-flavored-frontmatter: 0.4.0-alpha.0
   globals: ^13.17.0
   node-fetch: 3.2.10
   prettier: 2.7.1
@@ -28,6 +29,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.40.1_z4bbprzjrhnsfa24uvmcbu7f5q
   eslint: 8.25.0
   eslint-plugin-qwik: 0.11.1_eslint@8.25.0
+  fff-flavored-frontmatter: 0.4.0-alpha.0
   globals: 13.17.0
   node-fetch: 3.2.10
   prettier: 2.7.1
@@ -974,6 +976,10 @@ packages:
     dependencies:
       node-domexception: 1.0.0
       web-streams-polyfill: 3.2.1
+    dev: true
+
+  /fff-flavored-frontmatter/0.4.0-alpha.0:
+    resolution: {integrity: sha512-kVXL2lm1FJ9BppdoDC72UeMPch2Lf5xmEV1JA4Xy/HgbSIJM0Kv1xLfeVCPJvPQUK+D9GyX8FTC9VxS6N4seJg==}
     dev: true
 
   /file-entry-cache/6.0.1:
