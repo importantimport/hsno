@@ -12,6 +12,7 @@ specifiers:
   eslint-plugin-qwik: 0.11.1
   node-fetch: 3.2.10
   prettier: 2.7.1
+  prettier-config-standard: ^5.0.0
   typescript: 4.8.4
   vite: ^3.1.8
   vite-tsconfig-paths: 3.5.0
@@ -28,6 +29,7 @@ devDependencies:
   eslint-plugin-qwik: 0.11.1_eslint@8.25.0
   node-fetch: 3.2.10
   prettier: 2.7.1
+  prettier-config-standard: 5.0.0_prettier@2.7.1
   typescript: 4.8.4
   vite: 3.1.8
   vite-tsconfig-paths: 3.5.0_vite@3.1.8
@@ -1841,6 +1843,14 @@ packages:
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier-config-standard/5.0.0_prettier@2.7.1:
+    resolution: {integrity: sha512-QK252QwCxlsak8Zx+rPKZU31UdbRcu9iUk9X1ONYtLSO221OgvV9TlKoTf6iPDZtvF3vE2mkgzFIEgSUcGELSQ==}
+    peerDependencies:
+      prettier: ^2.4.0
+    dependencies:
+      prettier: 2.7.1
     dev: true
 
   /prettier/2.7.1:
