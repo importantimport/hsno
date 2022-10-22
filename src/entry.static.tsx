@@ -1,5 +1,5 @@
 import { qwikCityGenerate } from '@builder.io/qwik-city/static/node'
-import render from './entry.ssr'
+import render from '~/entry.ssr'
 import { fileURLToPath } from 'url'
 import { join } from 'path'
 
