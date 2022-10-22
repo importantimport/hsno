@@ -33,6 +33,5 @@ lerna-debug.log*
 *.sln
 *.sw?
 
-# Yarn
-.yarn/*
-!.yarn/releases
+# Partytown
+public/~partytown
