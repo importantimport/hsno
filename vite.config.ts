@@ -5,14 +5,12 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 import { partytownVite } from '@builder.io/partytown/utils'
 import { join } from 'path'
 
-export default defineConfig(() => {
-  return {
-    ssr: { target: 'node', format: 'esm' },
-    plugins: [
-      qwikCity(),
-      qwikVite(),
-      tsconfigPaths(),
-      partytownVite({ dest: join(__dirname, 'public', '~partytown') })
-    ]
-  }
+export default defineConfig({
+  ssr: { target: 'node', format: 'esm' },
+  plugins: [
+    qwikCity(),
+    qwikVite(),
+    tsconfigPaths(),
+    partytownVite({ dest: join(__dirname, 'public', '~partytown') })
+  ]
 })
