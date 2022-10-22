@@ -1,5 +1,6 @@
 import { component$ } from '@builder.io/qwik'
 import { useDocumentHead, useLocation } from '@builder.io/qwik-city'
+import { QwikPartytown } from '~/components/router-head/partytown'
 
 /**
  * The RouterHead component is placed inside of the document `<head>` element.
@@ -22,6 +23,8 @@ export const RouterHead = component$(() => {
         href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap"
         rel="stylesheet"
       />
+
+      <QwikPartytown />
 
       {head.meta.map((m) => (
         <meta {...m} />
