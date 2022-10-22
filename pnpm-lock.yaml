@@ -10,6 +10,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.40.1
   eslint: 8.25.0
   eslint-plugin-qwik: 0.11.1
+  globals: ^13.17.0
   node-fetch: 3.2.10
   prettier: 2.7.1
   prettier-config-standard: ^5.0.0
@@ -27,6 +28,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.40.1_z4bbprzjrhnsfa24uvmcbu7f5q
   eslint: 8.25.0
   eslint-plugin-qwik: 0.11.1_eslint@8.25.0
+  globals: 13.17.0
   node-fetch: 3.2.10
   prettier: 2.7.1
   prettier-config-standard: 5.0.0_prettier@2.7.1
