@@ -17,6 +17,7 @@
     "qwik": "qwik"
   },
   "devDependencies": {
+    "@builder.io/partytown": "^0.7.0",
     "@builder.io/qwik": "0.11.1",
     "@builder.io/qwik-city": "0.0.112",
     "@types/eslint": "8.4.6",
