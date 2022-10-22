@@ -7,6 +7,7 @@ import { join } from "path";
 
 export default defineConfig(() => {
   return {
+    ssr: { target: "node", format: "cjs" },
     plugins: [
       qwikCity(),
       qwikVite(),
