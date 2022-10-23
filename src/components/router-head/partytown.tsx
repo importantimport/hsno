@@ -1,8 +1,8 @@
 import {
-  partytownSnippet,
-  PartytownConfig
+  partytownSnippet
 } from '@builder.io/partytown/integration'
+import { config as hsnoConfig } from '~/../hsno.config'
 
-export const QwikPartytown = (props: PartytownConfig) => (
-  <script dangerouslySetInnerHTML={partytownSnippet(props)} />
+export const QwikPartytown = () => (
+  <script dangerouslySetInnerHTML={partytownSnippet(hsnoConfig.partytown)} />
 )

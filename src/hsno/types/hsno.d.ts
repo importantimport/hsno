@@ -2,6 +2,8 @@ import type { DocumentHeadValue } from '@builder.io/qwik-city'
 
 import type { FFFFlavoredFrontmatter } from 'fff-flavored-frontmatter'
 
+import type { HsnoConfig } from '~/hsno/types/config'
+
 declare global {
   namespace Hsno {
     type DocumentHeadValue = DocumentHeadValue & {
@@ -19,5 +21,7 @@ declare global {
       path: string
       content: string // MDXContent
     }
+
+    type Config = HsnoConfig
   }
 }

@@ -5,10 +5,14 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 import { partytownVite } from '@builder.io/partytown/utils'
 import { join } from 'path'
 
+import { config as hsnoConfig } from './hsno.config'
+
 export default defineConfig({
   ssr: { target: 'node', format: 'esm' },
   plugins: [
-    qwikCity(),
+    qwikCity({
+      basePathname: new URL(hsnoConfig.url).pathname
+    }),
     qwikVite(),
     tsconfigPaths(),
     partytownVite({ dest: join(__dirname, 'public', '~partytown') })
