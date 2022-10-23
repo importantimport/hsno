@@ -17,7 +17,8 @@
     "preview": "qwik build preview && vite preview --open",
     "ssg": "node server/entry.static",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "partytown": "partytown copylib public/~partytown"
   },
   "devDependencies": {
     "@builder.io/partytown": "^0.7.0",
