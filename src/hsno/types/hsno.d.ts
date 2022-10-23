@@ -6,7 +6,7 @@ import type { HsnoConfig } from '~/hsno/types/config'
 
 declare global {
   namespace Hsno {
-    type DocumentHeadValue = DocumentHeadValue & {
+    interface DocumentHeadValue extends DocumentHeadValue {
       frontmatter?: Omit<FFFFlavoredFrontmatter, 'title'> &
         Record<string, unknown>
     }
