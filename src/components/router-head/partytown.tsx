@@ -1,6 +1,4 @@
-import {
-  partytownSnippet
-} from '@builder.io/partytown/integration'
+import { partytownSnippet } from '@builder.io/partytown/integration'
 import { config as hsnoConfig } from '~/../hsno.config'
 
 export const QwikPartytown = () => (
