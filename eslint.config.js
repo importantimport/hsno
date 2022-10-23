@@ -22,8 +22,8 @@ export default [
       }
     },
     rules: {
-      ...ts.configs.recommended.rules,
       ...ts.configs['eslint-recommended'].rules,
+      ...ts.configs.recommended.rules,
       ...qwik.configs.recommended.rules,
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -38,7 +38,8 @@ export default [
       'prefer-spread': 'off',
       'no-case-declarations': 'off',
       'no-console': 'off',
-      '@typescript-eslint/no-unused-vars': ['error']
+      'no-undef': 'off',
+      '@typescript-eslint/no-unused-vars': 'error'
     }
   }
 ]
