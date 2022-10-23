@@ -15,6 +15,7 @@ specifiers:
   node-fetch: 3.2.10
   prettier: 2.7.1
   prettier-config-standard: ^5.0.0
+  qwik-speak: ^0.1.2
   typescript: 4.8.4
   vite: ^3.1.8
   vite-tsconfig-paths: 3.5.0
@@ -34,6 +35,7 @@ devDependencies:
   node-fetch: 3.2.10
   prettier: 2.7.1
   prettier-config-standard: 5.0.0_prettier@2.7.1
+  qwik-speak: 0.1.2_@builder.io+qwik@0.11.1
   typescript: 4.8.4
   vite: 3.1.8
   vite-tsconfig-paths: 3.5.0_vite@3.1.8
@@ -1878,6 +1880,15 @@ packages:
 
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
+    dev: true
+
+  /qwik-speak/0.1.2_@builder.io+qwik@0.11.1:
+    resolution: {integrity: sha512-9Dtvgp4N/eaTo8/0Jd2JF4L5gYFOBj/mjaMiizUy4yXBdgwOrkh6szt320PeO+YlUUlKL8qZnY5WMOJstJJEIQ==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@builder.io/qwik': '>=0.11.0'
+    dependencies:
+      '@builder.io/qwik': 0.11.1
     dev: true
 
   /recrawl-sync/2.2.3:

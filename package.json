@@ -35,6 +35,7 @@
     "node-fetch": "3.2.10",
     "prettier": "2.7.1",
     "prettier-config-standard": "^5.0.0",
+    "qwik-speak": "^0.1.2",
     "typescript": "4.8.4",
     "vite": "^3.1.8",
     "vite-tsconfig-paths": "3.5.0"
