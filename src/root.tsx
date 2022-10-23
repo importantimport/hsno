@@ -4,25 +4,25 @@ import {
   RouterOutlet,
   ServiceWorkerRegister
 } from '@builder.io/qwik-city'
+import { QwikSpeak } from 'qwik-speak'
 import { RouterHead } from '~/components/router-head/router-head'
+import { config as hsnoConfig } from '~/../hsno.config'
+import { translateFn } from '~/../speak.config'
 
+// TODO: REMOVE
 import './global.css'
 
 export default component$(() => (
-  /**
-   * The root of a QwikCity site always start with the <QwikCity> component,
-   * immediately followed by the document's <head> and <body>.
-   *
-   * Dont remove the `<head>` and `<body>` elements.
-   */
-  <QwikCity>
-    <head>
-      <meta charSet="utf-8" />
-      <RouterHead />
-    </head>
-    <body lang="en">
-      <RouterOutlet />
-      <ServiceWorkerRegister />
-    </body>
-  </QwikCity>
+  <QwikSpeak config={hsnoConfig.i18n} translateFn={translateFn}>
+    <QwikCity>
+      <head>
+        <meta charSet="utf-8" />
+        <RouterHead />
+      </head>
+      <body lang="en">
+        <RouterOutlet />
+        <ServiceWorkerRegister />
+      </body>
+    </QwikCity>
+  </QwikSpeak>
 ))

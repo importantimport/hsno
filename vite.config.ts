@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
-import { qwikVite } from '@builder.io/qwik/optimizer'
 import { qwikCity } from '@builder.io/qwik-city/vite'
+import { qwikVite } from '@builder.io/qwik/optimizer'
+import { qwikSpeakInline } from 'qwik-speak/inline'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import { partytownVite } from '@builder.io/partytown/utils'
 import { resolve } from 'path'
@@ -14,6 +15,10 @@ export default defineConfig({
       basePathname: new URL(hsnoConfig.url).pathname
     }),
     qwikVite(),
+    qwikSpeakInline({
+      supportedLangs: hsnoConfig.i18n.supportedLocales.map(({ lang }) => lang),
+      defaultLang: hsnoConfig.i18n.defaultLocale.lang
+    }),
     tsconfigPaths(),
     partytownVite({ dest: resolve('public', '~partytown') })
   ]
