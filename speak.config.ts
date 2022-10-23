@@ -1,4 +1,10 @@
-import type { LoadTranslationFn, TranslateFn } from 'qwik-speak'
+import type {
+  LoadTranslationFn,
+  ResolveLocaleFn,
+  SpeakLocale,
+  StoreLocaleFn,
+  TranslateFn
+} from 'qwik-speak'
 import { $ } from '@builder.io/qwik'
 import { isServer } from '@builder.io/qwik/build'
 import { config as hsnoConfig } from './hsno.config'
@@ -14,6 +20,21 @@ export const loadTranslation$: LoadTranslationFn = $(
   }
 )
 
+export const resolveLocale$: ResolveLocaleFn = $((url?: URL) => {
+  if (url)
+    return config.supportedLocales.find(
+      ({ lang }) =>
+        lang ===
+          config.supportedLocales.find(({ lang }) =>
+            url.pathname.startsWith(`/${lang}`)
+          )?.lang || config.defaultLocale.lang
+    )
+})
+
+export const storeLocale$: StoreLocaleFn = $((locale: SpeakLocale) => {})
+
 export const translateFn: TranslateFn = {
-  loadTranslation$: loadTranslation$
+  loadTranslation$: loadTranslation$,
+  resolveLocale$: resolveLocale$,
+  storeLocale$: storeLocale$
 }
