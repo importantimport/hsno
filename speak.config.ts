@@ -1,6 +1,9 @@
 import type { LoadTranslationFn, TranslateFn } from 'qwik-speak'
 import { $ } from '@builder.io/qwik'
 import { isServer } from '@builder.io/qwik/build'
+import { config as hsnoConfig } from './hsno.config'
+
+export const { i18n: config } = hsnoConfig
 
 export const loadTranslation$: LoadTranslationFn = $(
   async (lang: string, asset: string, url?: URL) => {

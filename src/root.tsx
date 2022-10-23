@@ -6,14 +6,13 @@ import {
 } from '@builder.io/qwik-city'
 import { QwikSpeak } from 'qwik-speak'
 import { RouterHead } from '~/components/router-head/router-head'
-import { config as hsnoConfig } from '~/../hsno.config'
-import { translateFn } from '~/../speak.config'
+import { config, translateFn } from '~/../speak.config'
 
 // TODO: REMOVE
 import './global.css'
 
 export default component$(() => (
-  <QwikSpeak config={hsnoConfig.i18n} translateFn={translateFn}>
+  <QwikSpeak config={config} translateFn={translateFn}>
     <QwikCity>
       <head>
         <meta charSet="utf-8" />
