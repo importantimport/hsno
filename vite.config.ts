@@ -16,6 +16,7 @@ export default defineConfig({
     }),
     qwikVite(),
     qwikSpeakInline({
+      assetsPath: './src/hsno/i18n',
       supportedLangs: hsnoConfig.i18n.supportedLocales.map(({ lang }) => lang),
       defaultLang: hsnoConfig.i18n.defaultLocale.lang
     }),
