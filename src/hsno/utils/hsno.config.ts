@@ -6,9 +6,9 @@ export const defaultConfig: Hsno.Config = {
       timeZone: 'America/Los_Angeles'
     },
     supportedLocales: [
-      { lang: 'en-US', timeZone: 'America/Los_Angeles' },
-      { lang: 'ja-JP', timeZone: 'Asia/Tokyo' },
-      { lang: 'zh-TW', timeZone: 'Asia/Taipei' }
+      { lang: 'en-US', timeZone: 'America/Los_Angeles' }
+      //   { lang: 'ja-JP', timeZone: 'Asia/Tokyo' },
+      //   { lang: 'zh-TW', timeZone: 'Asia/Taipei' }
     ],
     assets: ['app']
   }
