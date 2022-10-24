@@ -1,12 +1,13 @@
 import { component$ } from '@builder.io/qwik'
 import type { DocumentHead } from '@builder.io/qwik-city'
 import { Link } from '@builder.io/qwik-city'
+import { $translate as t, plural as p } from 'qwik-speak'
 
 export default component$(() => {
   return (
     <div>
       <h1>
-        Welcome to Qwik <span class="lightning">⚡️</span>
+        Welcome to {t('app.title')} <span class="hsno">🐳</span>
       </h1>
 
       <ul>

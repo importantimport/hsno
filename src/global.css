@@ -34,10 +34,6 @@ h2 {
   margin: 0 0 5px 0;
 }
 
-.lightning {
-  filter: hue-rotate(180deg);
-}
-
 section {
   padding: 20px;
   border-bottom: 10px solid var(--qwik-dark-blue);
