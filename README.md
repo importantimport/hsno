@@ -6,6 +6,8 @@
 
 This project is currently under active development, welcome to join!
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/importantimport/hsno)
+
 ## Status
 
 - Routing: WIP, Waiting [qwik#1844](https://github.com/BuilderIO/qwik/issues/1844)
