@@ -7,7 +7,7 @@ import type {
 } from 'qwik-speak'
 import { $ } from '@builder.io/qwik'
 import { isServer } from '@builder.io/qwik/build'
-import { config as hsnoConfig } from './hsno.config'
+import { config as hsnoConfig } from '~/../hsno.config'
 
 export const { i18n: config } = hsnoConfig
 
