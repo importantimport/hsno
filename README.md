@@ -1,8 +1,21 @@
 # Hsno[hoɕino]
 
-🐳 !mportantImport's Next-Gen Blog Starter. [EMPTY]
+🐳 !mportantImport's Next-Gen Blog Starter. [WIP]
 
 ---
+
+This project is currently under active development, welcome to join!
+
+## Status
+
+- Routing: WIP, Waiting [qwik#1844](https://github.com/BuilderIO/qwik/issues/1844)
+- Style: [Shiraha](https://github.com/importantimport/shiraha)
+- Feed: TODO (JSON Feed & JF2 Feed)
+- i18n: TODO
+
+---
+
+## Here is the original intro
 
 Happy to announce this project!
 
@@ -36,8 +49,3 @@ It will be painful, but worth it.
 ## Supports all post types available in [Indiekit](https://github.com/getindiekit/indiekit)
 
 Functionally, this is a very important change.
-
----
-
-That's all for now, I may add content later.
-Feel free to [contact me](https://github.com/importantimport#contact) in order to join the development of this project!
