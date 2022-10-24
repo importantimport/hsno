@@ -6,3 +6,9 @@ export type HsnoConfig = {
   i18n: SpeakConfig
   partytown?: PartytownConfig
 }
+
+export type HsnoUserConfig = {
+  url?: string
+  i18n?: Partial<SpeakConfig>
+  partytown?: PartytownConfig
+}

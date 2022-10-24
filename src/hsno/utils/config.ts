@@ -13,3 +13,12 @@ export const defaultConfig: Hsno.Config = {
     assets: ['app']
   }
 }
+
+export const defineConfig = (config: Hsno.UserConfig): Hsno.Config => ({
+  ...defaultConfig,
+  ...config,
+  i18n: {
+    ...defaultConfig.i18n,
+    ...config.i18n
+  }
+})

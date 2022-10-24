@@ -1,7 +1,6 @@
-import { mergeConfig } from 'vite'
-import { defaultConfig } from './src/hsno/utils/config'
+import { defineConfig } from './src/hsno/utils/config'
 
-export const config: Hsno.Config = mergeConfig(defaultConfig, {
+export const config: Hsno.Config = defineConfig({
   url: 'https://hsno.local',
   i18n: {
     defaultLocale: {
@@ -9,4 +8,4 @@ export const config: Hsno.Config = mergeConfig(defaultConfig, {
       timeZone: 'America/Los_Angeles'
     }
   }
-}) as Hsno.Config
+})
