@@ -15,6 +15,18 @@ This project is currently under active development, welcome to join!
 - Feed: TODO (JSON Feed & JF2 Feed)
 - i18n: TODO
 
+## Project Structure
+
+- [public](/public/) - static assets
+- [src](/src/)
+  - [hsno](/src/hsno/) - hsno core library
+    - [i18n](/src/hsno/i18n/) - i18n assets
+    - [types](/src/hsno/types/) - type definition
+    - [utils](/src/hsno/utils/) - default config & utils
+  - [components](/src/components/) - components library
+  - [routes](/src/routes/) - app routes
+- [hsno.config.ts](/hsno.config.ts) - user config
+
 ---
 
 ## Here is the original intro
