@@ -1,7 +1,7 @@
 import { component$ } from '@builder.io/qwik'
 import type { DocumentHead } from '@builder.io/qwik-city'
 import { Link } from '@builder.io/qwik-city'
-import { $translate as t, plural as p } from 'qwik-speak'
+import { $translate as t } from 'qwik-speak'
 
 export default component$(() => {
   return (
