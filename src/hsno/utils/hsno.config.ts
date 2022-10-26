@@ -1,15 +1,14 @@
+export const locales = {
+  'en-US': { lang: 'en-US', timeZone: 'America/Los_Angeles' },
+  // 'ja-JP': { lang: 'ja-JP', timeZone: 'Asia/Tokyo' },
+  // 'zh-TW': { lang: 'zh-TW', timeZone: 'Asia/Taipei' }
+} as const
+
 export const defaultConfig: Hsno.Config = {
   url: 'https://hsno.local',
   i18n: {
-    defaultLocale: {
-      lang: 'en-US',
-      timeZone: 'America/Los_Angeles'
-    },
-    supportedLocales: [
-      { lang: 'en-US', timeZone: 'America/Los_Angeles' }
-      //   { lang: 'ja-JP', timeZone: 'Asia/Tokyo' },
-      //   { lang: 'zh-TW', timeZone: 'Asia/Taipei' }
-    ],
+    defaultLocale: locales['en-US'],
+    supportedLocales: Object.values(locales),
     assets: ['app']
   }
 }
