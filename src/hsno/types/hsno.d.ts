@@ -18,7 +18,7 @@ declare global {
     type Post = FFFFlavoredFrontmatter & {
       slug: string
       path: string
-      content: string // MDXContent
+      // content: string // MDXContent
     }
 
     type Config = HsnoConfig
