@@ -1,9 +1,15 @@
-import { component$ } from '@builder.io/qwik'
-import type { DocumentHead } from '@builder.io/qwik-city'
+import { component$, Resource } from '@builder.io/qwik'
+import {
+  type RequestHandler,
+  type DocumentHead,
+  useEndpoint
+} from '@builder.io/qwik-city'
 import { Link } from '@builder.io/qwik-city'
 import { $translate as t } from 'qwik-speak'
+import { getPosts } from '~/hsno/utils/posts'
 
 export default component$(() => {
+  const posts = useEndpoint<Hsno.Post[]>()
   return (
     <div>
       <h1>
@@ -21,6 +27,23 @@ export default component$(() => {
           More info about development in <code>README.md</code>
         </li>
       </ul>
+
+      <h2>Posts</h2>
+
+      <Resource
+        value={posts}
+        onPending={() => <div>Loading...</div>}
+        onRejected={() => <div>Failed to load weather</div>}
+        onResolved={(posts) => (
+          <ul>
+            {posts?.map((post) => (
+              <li>
+                <Link href={`/${post.slug}`}>{post.title ?? 'no title'}</Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      />
 
       <h2>Commands</h2>
 
@@ -137,3 +160,6 @@ export default component$(() => {
 export const head: DocumentHead = {
   title: 'Welcome to Qwik'
 }
+
+export const onGet: RequestHandler = async (): Promise<Hsno.Post[]> =>
+  await getPosts()
