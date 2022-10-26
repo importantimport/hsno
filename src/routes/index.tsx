@@ -158,7 +158,7 @@ export default component$(() => {
 })
 
 export const head: DocumentHead = {
-  title: 'Welcome to Qwik'
+  title: 'Welcome to Hsno'
 }
 
 export const onGet: RequestHandler = async (): Promise<Hsno.Post[]> =>
