@@ -8,6 +8,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { resolve } from 'path'
 
 import { config as hsnoConfig } from './hsno.config'
+import { config as pwaConfig } from './src/hsno/utils/pwa.config'
 
 export default defineConfig({
   ssr: { target: 'node', format: 'esm' },
@@ -23,12 +24,6 @@ export default defineConfig({
     }),
     tsconfigPaths(),
     partytownVite({ dest: resolve('public', '~partytown') }),
-    VitePWA({
-      injectRegister: null,
-      registerType: 'autoUpdate',
-      strategies: 'injectManifest',
-      srcDir: 'src/routes',
-      filename: 'service-worker.ts'
-    })
+    VitePWA(pwaConfig)
   ]
 })
