@@ -7,18 +7,17 @@
     "build": "qwik build",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
-    "build.static": "vite build --ssr src/entry.static.tsx",
+    "build.server": "vite build -c vite.config.static.ts",
     "build.types": "tsc --incremental --noEmit",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
+    "partytown": "partytown copylib public/~partytown",
     "preview": "qwik build preview && vite preview --open",
-    "ssg": "node server/entry.static",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik",
-    "partytown": "partytown copylib public/~partytown"
+    "qwik": "qwik"
   },
   "devDependencies": {
     "@builder.io/partytown": "^0.7.1",
