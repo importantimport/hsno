@@ -32,7 +32,6 @@
     "eslint-plugin-qwik": "^0.12.0",
     "fff-flavored-frontmatter": "0.4.0-alpha.0",
     "globals": "^13.17.0",
-    "node-fetch": "3.2.10",
     "prettier": "^2.7.1",
     "prettier-config-standard": "^5.0.0",
     "qwik-speak": "^0.1.2",
