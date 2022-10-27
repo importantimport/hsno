@@ -9,6 +9,7 @@ export default component$(() => {
 
   return (
     <Layout>
+      <h1>{head.title}</h1>
       <Slot />
       <a href="https://github.com/importantimport/hsno" target="_blank">
         Article!
