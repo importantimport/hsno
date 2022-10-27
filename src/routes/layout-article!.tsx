@@ -5,8 +5,7 @@ import Layout from './layout!'
 export default component$(() => {
   const head: Hsno.DocumentHeadValue = useDocumentHead()
 
-  console.log(head)
-  console.log(head.frontmatter)
+  if (import.meta.env.DEV) console.log(head)
 
   return (
     <Layout>
