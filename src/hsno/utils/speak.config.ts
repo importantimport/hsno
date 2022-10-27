@@ -1,8 +1,8 @@
 import type {
   LoadTranslationFn,
   ResolveLocaleFn,
-  SpeakLocale,
-  StoreLocaleFn,
+//   SpeakLocale,
+//   StoreLocaleFn,
   TranslateFn
 } from 'qwik-speak'
 import { $ } from '@builder.io/qwik'
@@ -30,10 +30,10 @@ export const resolveLocale$: ResolveLocaleFn = $((url?: URL) => {
     )
 })
 
-export const storeLocale$: StoreLocaleFn = $((locale: SpeakLocale) => {})
+// export const storeLocale$: StoreLocaleFn = $((locale: SpeakLocale) => {})
 
 export const translateFn: TranslateFn = {
   loadTranslation$: loadTranslation$,
   resolveLocale$: resolveLocale$,
-  storeLocale$: storeLocale$
+//   storeLocale$: storeLocale$
 }
