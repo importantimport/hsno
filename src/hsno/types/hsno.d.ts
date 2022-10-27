@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import type { DocumentHeadValue } from '@builder.io/qwik-city'
+import type { DocumentHeadValue as QwikCityDocumentHeadValue } from '@builder.io/qwik-city'
 import type { FFFFlavoredFrontmatter } from 'fff-flavored-frontmatter'
 import type { HsnoConfig, HsnoUserConfig } from '~/hsno/types/config'
 
 declare global {
   namespace Hsno {
-    interface DocumentHeadValue extends DocumentHeadValue {
+    interface DocumentHeadValue extends QwikCityDocumentHeadValue {
       frontmatter?: Omit<FFFFlavoredFrontmatter, 'title'> &
         Record<string, unknown>
     }
