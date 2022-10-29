@@ -30,7 +30,7 @@ export const toJSONFeed = async (posts: Hsno.Post[]) =>
           date_published: post.published ?? post.created,
           date_modified: post.updated ?? post.published ?? post.created,
           tags: post.tags,
-          content_html: (await renderToString(post.Content(), {
+          content_html: (await renderToString(post.Content!(), {
             containerTagName: 'body'
           })).html
         }))
