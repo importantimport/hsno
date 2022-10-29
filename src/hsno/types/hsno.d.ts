@@ -2,7 +2,7 @@
 import type { DocumentHeadValue as QwikCityDocumentHeadValue } from '@builder.io/qwik-city'
 import type { FFFFlavoredFrontmatter } from 'fff-flavored-frontmatter'
 import type { HsnoConfig, HsnoUserConfig } from '~/hsno/types/config'
-import type { MDXContent } from 'mdx/types'
+import type { JSX } from '@builder.io/qwik/jsx-runtime'
 
 declare global {
   namespace Hsno {
@@ -13,14 +13,14 @@ declare global {
 
     type Module = {
       frontmatter?: FFFFlavoredFrontmatter & Record<string, unknown>
-      default: MDXContent
+      default: () => JSX.Element // MDXContent
     }
 
     type Post = FFFFlavoredFrontmatter & {
       slug: string
       path: string
       frontmatter?: FFFFlavoredFrontmatter & Record<string, unknown>
-      Content?: MDXContent
+      Content?: () => JSX.Element // MDXContent
     }
 
     type Config = HsnoConfig
