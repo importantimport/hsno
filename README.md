@@ -10,9 +10,9 @@ This project is currently under active development, welcome to join!
 
 ## Status
 
-- Routing: WIP, Waiting [qwik#1844](https://github.com/BuilderIO/qwik/issues/1844)
+- Routing: WIP
 - Style: [Shiraha](https://github.com/importantimport/shiraha)
-- Feed: TODO (JSON Feed & JF2 Feed)
+- Feed: WIP (JSON Feed & JF2 Feed)
 - i18n: TODO
 
 ## Project Structure
