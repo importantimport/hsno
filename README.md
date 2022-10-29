@@ -4,9 +4,17 @@
 
 ---
 
-This project is currently under active development, welcome to join!
+<div align="center">
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/importantimport/hsno)
+**[<kbd> <br> Open in Stackblitz <br> </kbd>](https://stackblitz.com/github/importantimport/hsno)** 
+**[<kbd> <br> Run in Codeflow <br> </kbd>](https://pr.new/github.com/importantimport/hsno)** 
+**[<kbd> <br> Fork <br> </kbd>](https://github.com/importantimport/hsno/fork)**
+
+</div>
+
+---
+
+This project is currently under active development, welcome to join!
 
 ## Status
 
