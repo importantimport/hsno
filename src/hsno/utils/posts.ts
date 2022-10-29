@@ -1,11 +1,11 @@
-export type GenPostsOptions = {
+export type GetPostsOptions = {
   postSlug?: string
   postLimit?: number
   filterUnlisted?: boolean
 }
 
 export const getPosts = async (
-  { postSlug, postLimit, filterUnlisted }: GenPostsOptions = {
+  { postSlug, postLimit, filterUnlisted }: GetPostsOptions = {
     filterUnlisted: false
   }
 ): Promise<Hsno.Post[]> =>
@@ -36,7 +36,7 @@ export const getPosts = async (
     )
 
 export const getPostsContent = async (
-  { postSlug, postLimit, filterUnlisted }: GenPostsOptions = {
+  { postSlug, postLimit, filterUnlisted }: GetPostsOptions = {
     filterUnlisted: false
   }
 ): Promise<Hsno.Post[]> =>
