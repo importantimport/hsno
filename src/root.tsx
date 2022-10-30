@@ -6,7 +6,7 @@ import {
 } from '@builder.io/qwik-city'
 import { QwikSpeak } from 'qwik-speak'
 import { RouterHead } from '~/components/router-head/router-head'
-import { config, translateFn } from '~/hsno/utils/speak.config'
+import { config, translateFn } from '~/hsno/config/speak.config'
 
 // TODO: REMOVE
 import './global.css'

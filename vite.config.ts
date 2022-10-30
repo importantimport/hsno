@@ -9,7 +9,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 import { resolve } from 'node:path'
 
 import { config as hsnoConfig } from './hsno.config'
-import { config as pwaConfig } from './src/hsno/utils/pwa.config'
+import { config as pwaConfig } from './src/hsno/config/pwa.config'
 
 export default defineConfig({
   plugins: [
