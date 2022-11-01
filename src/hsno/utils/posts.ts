@@ -68,3 +68,21 @@ export const getPostsContent = async (
         Date.parse(b.published ?? b.created ?? '1989-06-04') -
         Date.parse(a.published ?? a.created ?? '1989-06-04')
     )
+
+const modules = import.meta.glob<Hsno.Module['default']>(
+  '../../../public/**/*.{md,mdx}',
+  {
+    import: 'default',
+    eager: true
+  }
+)
+
+export const usePostContent = (slug: string) =>
+  Object.entries(modules).find(([path]) =>
+    path.startsWith(`../../../public/${slug}.md`)
+  )?.[1]
+
+export const usePostsSlug = () =>
+  Object.keys(modules).map((path) => ({
+    post: path.substring(0, path.lastIndexOf('.')).slice(16)
+  }))
