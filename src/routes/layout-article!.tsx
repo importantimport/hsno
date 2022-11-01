@@ -1,6 +1,6 @@
 import { component$, Slot } from '@builder.io/qwik'
 import { useDocumentHead } from '@builder.io/qwik-city'
-import Layout from './layout!'
+import Layout from '~/routes/layout!'
 
 export default component$(() => {
   const head: Hsno.DocumentHeadValue = useDocumentHead()
