@@ -8,3 +8,14 @@ Hello, World!
 import { Counter } from '~/components/example/counter'
 
 <Counter />
+
+{/* TODO: Markdown Image Optimization */}
+{/* ![!mportantImport remarkMdxImages](/src/assets/ii.png?w=512&h=512&webp,avif) */}
+
+import src from '~/assets/ii.png?w=512&h=512&avif'
+import srcset from '~/assets/ii.png?w=64;128;256&avif&srcset'
+
+<picture>
+  <source scrset={srcset} type="image/avif" />
+  <img src={src} alt="!mportantImport Import" />
+</picture>
