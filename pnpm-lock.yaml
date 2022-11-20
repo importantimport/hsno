@@ -16,6 +16,7 @@ specifiers:
   prettier: ^2.7.1
   prettier-config-standard: ^5.0.0
   qwik-speak: ^0.1.3
+  remark-mdx-images: ^2.0.0
   typescript: ^4.8.4
   vite: ^3.2.2
   vite-imagetools: ^4.0.11
@@ -39,6 +40,7 @@ devDependencies:
   prettier: 2.7.1
   prettier-config-standard: 5.0.0_prettier@2.7.1
   qwik-speak: 0.1.3_@builder.io+qwik@0.12.1
+  remark-mdx-images: 2.0.0
   typescript: 4.8.4
   vite: 3.2.2
   vite-imagetools: 4.0.11
@@ -3968,6 +3970,15 @@ packages:
     hasBin: true
     dependencies:
       jsesc: 0.5.0
+    dev: true
+
+  /remark-mdx-images/2.0.0:
+    resolution: {integrity: sha512-Eh9sutDjzBPRBMnD7C9tn8DdqCaVNFo3rrqEryqPBJzMZ33i/MMO68ucINsOP3lNGSsCA2N2X+Zws1pHphWSpg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@types/mdast': 3.0.10
+      unified: 10.1.2
+      unist-util-visit: 4.1.1
     dev: true
 
   /remark-mdx/2.1.5:
