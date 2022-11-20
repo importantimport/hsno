@@ -1,6 +1,6 @@
 // vite config
 import { defineConfig } from 'vite'
-// other config
+// hsno & plugin config
 import { config as hsnoConfig } from './hsno.config'
 import { config as imagetoolsConfig } from './src/hsno/config/imagetools.config'
 import { config as pwaConfig } from './src/hsno/config/pwa.config'
