@@ -31,7 +31,7 @@ export default component$(() => {
 
   if (!Content) return <div>404: Not found</div>
 
-  return (
+  else return (
     <article>
       <Content />
     </article>
