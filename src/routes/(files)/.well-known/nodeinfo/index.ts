@@ -5,11 +5,11 @@ export const onRequest: RequestHandler = async ({ json }) => {
   json(200, {
     links: [
       {
-        href: new URL('/nodeinfo/2.0.json', hsnoConfig.url),
+        href: new URL('/nodeinfo/2.0.json', hsnoConfig.origin),
         rel: 'http://nodeinfo.diaspora.software/ns/schema/2.0',
       },
       {
-        href: new URL('/nodeinfo/2.1.json', hsnoConfig.url),
+        href: new URL('/nodeinfo/2.1.json', hsnoConfig.origin),
         rel: 'http://nodeinfo.diaspora.software/ns/schema/2.1',
       }
     ]

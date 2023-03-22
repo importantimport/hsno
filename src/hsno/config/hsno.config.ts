@@ -5,7 +5,7 @@ export const locales = {
 } as const
 
 export const defaultConfig: Hsno.Config = {
-  url: 'https://hsno.local/',
+  origin: 'https://hsno.local',
   i18n: {
     defaultLocale: locales['en-US'],
     supportedLocales: Object.values(locales),

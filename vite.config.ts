@@ -1,7 +1,7 @@
 // vite config
 import { defineConfig } from 'vite'
 // hsno & plugin config
-import { config as hsnoConfig } from './hsno.config'
+// import { config as hsnoConfig } from './hsno.config'
 // import { config as imagetoolsConfig } from './src/hsno/config/imagetools.config'
 import { config as pwaConfig } from './src/hsno/config/pwa.config'
 // vite plugins
@@ -20,10 +20,7 @@ import { resolve } from 'node:path'
 export default defineConfig({
   plugins: [
     // imagetools(imagetoolsConfig),
-    qwikCity({
-      // basePathname: new URL(hsnoConfig.url).pathname,
-      // mdx: { remarkPlugins: [remarkMdxImages] }
-    }),
+    qwikCity(),
     qwikVite(),
     // qwikSpeakInline({
     //   assetsPath: './src/hsno/i18n',
