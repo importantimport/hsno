@@ -1,6 +1,7 @@
 {
   "name": "hsno",
   "description": "!mportantImport's Next-Gen Blog Starter.",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
   "scripts": {
