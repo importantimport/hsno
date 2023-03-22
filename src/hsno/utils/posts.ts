@@ -10,8 +10,8 @@ export const getPosts = async (
   }
 ): Promise<Hsno.Post[]> =>
   (
-    await Promise.all(
-      Object.entries(
+    await Promise.all([
+      ...Object.entries(
         import.meta.glob<Hsno.Module['frontmatter']>(
           '../../routes/\\(posts\\)/**/index*.{md,mdx}',
           { import: 'frontmatter' }
@@ -20,8 +20,18 @@ export const getPosts = async (
         ...(await module()),
         slug: path.substring(0, path.lastIndexOf('/')).slice(21),
         path
+      })),
+      ...Object.entries(
+        import.meta.glob<Hsno.Module['frontmatter']>(
+          '../../../public/**/*.{md,mdx}',
+          { import: 'frontmatter' }
+        )
+      ).map(async ([path, module]) => ({
+        ...(await module()),
+        slug: path.substring(0, path.lastIndexOf('.')).slice(16),
+        path
       }))
-    )
+    ])
   )
     .filter(
       (post, index) =>
@@ -43,18 +53,16 @@ export const getPostsContent = async (
   (
     await Promise.all(
       Object.entries(
-        import.meta.glob<Hsno.Module>(
-          '../../routes/\\(posts\\)/**/index*.{md,mdx}'
-        )
-      ).map(async ([path, module]) => {
-        const post = await module()
-        return {
-          ...post.frontmatter,
-          Content: post.default,
-          slug: path.substring(0, path.lastIndexOf('/')).slice(21),
-          path
-        }
-      })
+        import.meta.glob<Hsno.Module>([
+          '../../routes/\\(posts\\)/**/index*.{md,mdx}',
+          '../../../public/**/*.{md,mdx}'
+        ])
+      ).map(async ([path, module]) => ({
+        ...(await module()).frontmatter,
+        Content: (await module()).default,
+        slug: path.substring(0, path.lastIndexOf('/')).slice(21),
+        path
+      }))
     )
   )
     .filter(

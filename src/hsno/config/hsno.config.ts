@@ -1,5 +1,5 @@
 export const locales = {
-  'en-US': { lang: 'en-US', timeZone: 'America/Los_Angeles' },
+  'en-US': { lang: 'en-US', timeZone: 'America/Los_Angeles' }
   // 'ja-JP': { lang: 'ja-JP', timeZone: 'Asia/Tokyo' },
   // 'zh-TW': { lang: 'zh-TW', timeZone: 'Asia/Taipei' }
 } as const
