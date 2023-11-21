@@ -8,6 +8,8 @@
  * You can also use this file to add more functionality that runs in the service worker.
  */
 import { setupServiceWorker } from '@builder.io/qwik-city/service-worker'
+import { clientsClaim } from 'workbox-core'
+import { cleanupOutdatedCaches, precacheAndRoute } from 'workbox-precaching'
 
 setupServiceWorker()
 
@@ -16,3 +18,10 @@ addEventListener('install', () => self.skipWaiting())
 addEventListener('activate', () => self.clients.claim())
 
 declare const self: ServiceWorkerGlobalScope
+
+// vite-plugin-pwa
+// https://github.com/vite-pwa/vite-plugin-pwa/blob/main/examples/react-router/src/claims-sw.ts
+precacheAndRoute(self.__WB_MANIFEST)
+cleanupOutdatedCaches()
+self.skipWaiting()
+clientsClaim()

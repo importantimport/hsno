@@ -2,6 +2,7 @@ import { qwikVite } from '@builder.io/qwik/optimizer'
 import { qwikCity } from '@builder.io/qwik-city/vite'
 import UnoCSS from 'unocss/vite'
 import { defineConfig } from 'vite'
+import { VitePWA } from 'vite-plugin-pwa'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 import unocssConfig from './uno.config'
@@ -13,6 +14,12 @@ export default defineConfig({
     qwikCity(),
     qwikVite(),
     UnoCSS(unocssConfig),
+    VitePWA({
+      filename: 'service-worker.ts',
+      registerType: 'autoUpdate',
+      srcDir: 'src/routes',
+      strategies: 'injectManifest',
+    }),
     tsconfigPaths(),
   ],
   // dev: {

@@ -8,7 +8,8 @@
       "~/*": [
         "./src/*"
       ]
-    }
+    },
+    "types": ["node", "vite/client", "vite-plugin-pwa/client"]
   },
   // "compilerOptions": {
   //   "allowJs": true,
