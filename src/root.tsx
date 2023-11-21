@@ -9,7 +9,7 @@ import { RouterHead } from './components/router-head/router-head'
 import './global.css'
 
 import '@unocss/reset/tailwind.css'
-import 'uno.css'
+// import 'uno.css'
 import 'virtual:unocss-devtools'
 
 export default component$(() => {
