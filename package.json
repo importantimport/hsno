@@ -1,8 +1,8 @@
 {
   "name": "my-qwik-empty-starter",
-  "description": "App with Routing built-in ready to create your app",
   "type": "module",
   "private": true,
+  "description": "App with Routing built-in ready to create your app",
   "trustedDependencies": [
     "sharp"
   ],

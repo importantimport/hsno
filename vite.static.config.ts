@@ -1,20 +1,21 @@
-import { staticAdapter } from "@builder.io/qwik-city/adapters/static/vite";
+import { staticAdapter } from '@builder.io/qwik-city/adapters/static/vite'
+import { mergeConfig } from 'vite'
+
 // import { extendConfig } from "@builder.io/qwik-city/vite";
-import baseConfig from "./vite.config";
-import { mergeConfig } from "vite";
+import baseConfig from './vite.config'
 
 export default mergeConfig(baseConfig, {
   build: {
-    ssr: true,
     rollupOptions: {
-      input: ['@qwik-city-plan']
-    }
+      input: ['@qwik-city-plan'],
+    },
+    ssr: true,
   },
   plugins: [
     staticAdapter({
-      origin: 'https://yoursite.qwik.dev'
-    })
-  ]
+      origin: 'https://yoursite.qwik.dev',
+    }),
+  ],
 })
 
 // export default extendConfig(baseConfig, () => {
