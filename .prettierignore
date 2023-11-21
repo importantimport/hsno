@@ -1,8 +1,0 @@
-# Files Prettier should not format
-**/*.log
-**/.DS_Store
-*.
-dist
-public
-node_modules
-pnpm-lock.yaml
