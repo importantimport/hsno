@@ -10,7 +10,6 @@ import './global.css'
 
 import '@unocss/reset/tailwind.css'
 // import 'uno.css'
-import 'virtual:unocss-devtools'
 
 /**
  * The root of a QwikCity site always start with the <QwikCityProvider> component,

@@ -4,10 +4,12 @@
     "lib": ["ESNext", "DOM", "DOM.Iterable", "WebWorker"],
     "jsx": "react-jsx",
     "jsxImportSource": "@builder.io/qwik",
+    "baseUrl": ".",
     "paths": {
       "~/*": [
         "./src/*"
-      ]
+      ],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "types": ["node", "vite/client", "vite-plugin-pwa/client"]
   },
@@ -33,14 +35,10 @@
   //     "~/*": ["./src/*"]
   //   }
   // },
-  "files": [
-    // "./.eslintrc.cjs",
-    // "./eslint.config.js"
-  ],
   "include": [
     "src",
     "./*.d.ts",
     "./*.config.ts",
-    "eslint.config.js"
+    ".contentlayer/generated"
   ]
 }

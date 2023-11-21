@@ -10,6 +10,7 @@
  * - Optimizer/Serialization/Deserialization code is not exercised!
  */
 import { type RenderOptions, render } from '@builder.io/qwik'
+import 'virtual:unocss-devtools'
 
 import Root from './root'
 
