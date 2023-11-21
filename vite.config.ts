@@ -4,15 +4,15 @@ import UnoCSS from 'unocss/vite'
 import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
+import unocssConfig from './uno.config'
+
 export default defineConfig({
   build: { cssMinify: 'lightningcss' },
   css: { transformer: 'lightningcss' },
   plugins: [
     qwikCity(),
     qwikVite(),
-    UnoCSS({
-      mode: 'dist-chunk',
-    }),
+    UnoCSS(unocssConfig),
     tsconfigPaths(),
   ],
   // dev: {
