@@ -13,6 +13,4 @@ import { type RenderOptions, render } from '@builder.io/qwik'
 
 import Root from './root'
 
-export default function (opts: RenderOptions) {
-  return render(document, <Root />, opts)
-}
+export default (opts: RenderOptions) => render(document, <Root />, opts)

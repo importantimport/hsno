@@ -2,7 +2,7 @@ import type { RequestHandler } from '@builder.io/qwik-city'
 
 import { Slot, component$ } from '@builder.io/qwik'
 
-export const onGet: RequestHandler = async ({ cacheControl }) => {
+export const onGet: RequestHandler = async ({ cacheControl }) =>
   // Control caching for this request for best performance and to reduce hosting costs:
   // https://qwik.builder.io/docs/caching/
   cacheControl({
@@ -11,8 +11,5 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
     // Always serve a cached response by default, up to a week stale
     staleWhileRevalidate: 60 * 60 * 24 * 7,
   })
-}
 
-export default component$(() => {
-  return <Slot />
-})
+export default component$(() => <Slot />)
