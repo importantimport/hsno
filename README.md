@@ -14,6 +14,10 @@
 
 ---
 
+## License
+
+Licensed under the [MIT](LICENSE.md).
+
 <!-- # Qwik City App ⚡️
 
 - [Qwik Docs](https://qwik.builder.io/)
