@@ -16,6 +16,8 @@
 
 ## License
 
+> [`SVG Icon`](/public/icon.svg) from [microsoft/fluentui-emoji](https://github.com/microsoft/fluentui-emoji). License: [MIT](https://github.com/microsoft/fluentui-emoji/blob/main/LICENSE)
+
 Licensed under the [MIT](LICENSE.md).
 
 <!-- # Qwik City App ⚡️
