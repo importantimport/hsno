@@ -18,7 +18,8 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "generate-pwa-assets": "pwa-assets-generator"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.2.18",
@@ -29,6 +30,7 @@
     "@types/eslint": "^8.44.7",
     "@types/node": "^20.9.3",
     "@unocss/reset": "^0.57.7",
+    "@vite-pwa/assets-generator": "^0.0.11",
     "contentlayer": "^0.3.4",
     "eslint": "^8.54.0",
     "eslint-plugin-qwik": "^1.2.18",
