@@ -4,7 +4,7 @@ import { allArticles } from 'contentlayer/generated'
 
 export default component$(() => {
   const { params } = useLocation()
-  const article = allArticles.find(article => article._raw.sourceFileName.split('.')[0] === params.slug)
+  const article = allArticles.find(({ slug }) => slug === params.slug)
   if (!article)
     throw new Error(`Article not found for slug: ${params.slug}`)
 
@@ -18,5 +18,5 @@ export default component$(() => {
 })
 
 export const onStaticGenerate: StaticGenerateHandler = () => ({
-  params: allArticles.map(article => ({ slug: article._raw.sourceFileName.split('.')[0] })),
+  params: allArticles.map(({ slug }) => ({ slug })),
 })
