@@ -14,7 +14,7 @@ export default component$(() => {
   const article = useArticle()
 
   return (
-    <article>
+    <article class="prose">
       <h1>{article.value.title}</h1>
       <time dateTime={article.value.created}>
         {new Intl.DateTimeFormat('en-US', { // TODO: hsno.config.ts site.lang
