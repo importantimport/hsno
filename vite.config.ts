@@ -7,7 +7,8 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { watch } from 'vite-plugin-watch'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
-import unocssConfig from './uno.config'
+import pwaConfig from './pwa.config'
+import unoConfig from './uno.config'
 
 export default defineConfig({
   build: { cssMinify: 'lightningcss' },
@@ -15,13 +16,8 @@ export default defineConfig({
   plugins: [
     qwikCity(),
     qwikVite(),
-    UnoCSS(unocssConfig),
-    VitePWA({
-      filename: 'service-worker.ts',
-      registerType: 'autoUpdate',
-      srcDir: 'src/routes',
-      strategies: 'injectManifest',
-    }),
+    UnoCSS(unoConfig),
+    VitePWA(pwaConfig),
     tsconfigPaths(),
     // https://github.com/contentlayerdev/contentlayer/issues/179#issuecomment-1789585127
     watch({
