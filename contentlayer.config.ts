@@ -14,4 +14,9 @@ export const Article = defineDocumentType(() => ({
   name: 'Article',
 }))
 
-export default makeSource({ contentDirPath: 'posts', documentTypes: [Article] })
+export default makeSource({
+  contentDirPath: 'posts',
+  documentTypes: [Article],
+  // TODO: remark/rehype plugins
+  markdown: {},
+})
