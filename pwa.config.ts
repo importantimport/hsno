@@ -6,24 +6,24 @@ export default {
     icons: [
       {
         sizes: '64x64',
-        src: 'pwa-64x64.png',
-        type: 'image/png',
+        src: 'favicon.ico',
+        type: 'image/x-icon',
       },
       {
         sizes: '192x192',
-        src: 'pwa-192x192.png',
+        src: 'icon-192.png',
         type: 'image/png',
       },
       {
         purpose: 'any',
         sizes: '512x512',
-        src: 'pwa-512x512.png',
+        src: 'icon-512.png',
         type: 'image/png',
       },
       {
         purpose: 'maskable',
         sizes: '512x512',
-        src: 'maskable-icon-512x512.png',
+        src: 'icon-maskalbe-512.png',
         type: 'image/png',
       },
     ],
