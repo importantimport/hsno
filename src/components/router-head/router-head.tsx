@@ -14,7 +14,12 @@ export const RouterHead = component$(() => {
 
       <link href={loc.url.href} rel="canonical" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      <link href="/icon.svg" rel="icon" type="image/svg+xml" />
+
+      {/* TODO: hsno.config.ts site.icon.endsWith('.svg') */}
+      <link href="/icon.svg" rel="icon" sizes="any" type="image/svg+xml" />
+      <link href="/icon-192.png" rel="icon" sizes="192x192" type="image/png" />
+      <link href="/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon" />
+      <link href="/icon-maskable-180.png" rel="apple-touch-icon" sizes="180x180" type="image/png" />
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} />
