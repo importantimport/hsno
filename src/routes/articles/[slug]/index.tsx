@@ -11,7 +11,11 @@ export default component$(() => {
   return (
     <article>
       <h1>{article.title}</h1>
-      <time>{article.created}</time>
+      <time dateTime={article.created}>
+        {new Intl.DateTimeFormat('en-US', { // TODO: hsno.config.ts site.lang
+          dateStyle: 'full',
+        }).format(new Date(article.created))}
+      </time>
       <div dangerouslySetInnerHTML={article.body.html}></div>
     </article>
   )
