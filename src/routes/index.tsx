@@ -22,5 +22,5 @@ export const head: DocumentHead = {
       name: 'description',
     },
   ],
-  title: 'Welcome to Qwik',
+  title: 'Hsno',
 }
