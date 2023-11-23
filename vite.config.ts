@@ -15,7 +15,7 @@ export default defineConfig({
   css: { transformer: 'lightningcss' },
   plugins: [
     qwikCity(),
-    qwikVite(),
+    qwikVite({ devTools: { clickToSource: false } }),
     UnoCSS(unoConfig),
     VitePWA(pwaConfig),
     tsconfigPaths(),
