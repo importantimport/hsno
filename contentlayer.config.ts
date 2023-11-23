@@ -10,7 +10,7 @@ export const Article = defineDocumentType(() => ({
     created: { required: true, type: 'date' },
     title: { required: true, type: 'string' },
   },
-  filePathPattern: 'articles/**/*.md',
+  filePathPattern: 'articles/**/*.{md,mdx}',
   name: 'Article',
 }))
 
