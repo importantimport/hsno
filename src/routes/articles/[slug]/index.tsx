@@ -1,5 +1,6 @@
 import { component$ } from '@builder.io/qwik'
 import { type DocumentHead, type StaticGenerateHandler, routeLoader$ } from '@builder.io/qwik-city'
+import Image from '~/../public/icon-maskable-512.png?jsx'
 import { allArticles } from 'contentlayer/generated'
 
 export const useArticle = routeLoader$(async ({ params }) => {
@@ -21,6 +22,7 @@ export default component$(() => {
           dateStyle: 'full',
         }).format(new Date(article.value.created))}
       </time>
+      <Image alt="Image Optimization Test" />
       <div dangerouslySetInnerHTML={article.value.body.html}></div>
     </article>
   )
